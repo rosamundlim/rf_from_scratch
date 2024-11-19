@@ -7,3 +7,19 @@ The goal is to use this RF Model to predict whether an individual's annual incom
 
 ### <b> Directory Sturcture <b>
 
+```
+RF_FROM_SCRATCH
+│   .gitignore
+│   model_train_eval.ipynb
+│   README.md
+│   requirements.txt
+│   
+├───data
+│       data.csv
+│       
+└───src
+        datapipeline.py
+        decision_tree.py
+        random_forest.py
+        __init__.py
+```
