@@ -1,11 +1,11 @@
 ## Code Random Forest from scratch using Numpy
 
-### <b>Overview:<b>
+### <b>Overview:</b>
 In this repo, I coded a Random Forest (RF) Model from scratch (using only NUMPY), achieving an 88% accuracy on UCI Census Income Dataset.  
 
 The goal is to use this RF Model to predict whether an individual's annual income is >=50,000. This makes it a binary classification problem, with two labels: 0, if an individual income is <50,000, and 1, if an individual's income is >=50,000. 
 
-### <b>Directory Structure:<b>
+### <b>Directory Structure:</b>
 
 ```
 RF_FROM_SCRATCH
@@ -35,32 +35,32 @@ Typically, we do not upload our data files on git repo, but for the purposes of 
 The file that is important if you would like to see me put the coded RF to use is
 model_train_eval.ipynb, located in root. 
 
-### <b>Coding the Model:<b>
+### <b>Coding the Model:</b>
 
 Random Forest is a multitude of Decision Trees. So, to build a Random Forest, we
 need to first code a Decision Tree. 
 
-#### <b>Decision Tree:<b>
+#### <b>Decision Tree:</b>
 
 ![decision-tree-diagram](assets/decision_tree.png)
 
 My decision tree classifier was built from scratch using Python and Numpy. It recursively splits the dataset based on feature thresholds that minimize Gini impurity, creating nodes that store feature indices, thresholds, and class labels. The tree grows until a stopping criterion (max depth or pure nodes) is met. The ```fit``` method selects the best splits, while the ```predict``` method traverses the tree to classify new data based on learned splits. My model uses a majority class rule when no further splitting improves impurity reduction.
 
-#### <b>Random Forest:<b>
+#### <b>Random Forest:</b>
 
 To create a Random Forest, we need to define the number of Decision Trees in the forest. I draw samples from the X_train set using bootstrap aggregation (just a fancy term for sampling with replacement, also called bagging); I also sample features from the X_train set. How many times do I draw? As many times as the number of trees in my random forest. <br>
 Model training happens by fitting Decision Trees to each sample data. <br>
 For inferencing, (we use the X_test data now) we use a simple averaging mechanism, where the "votes" are averaged across the trees for each data point (an entry of X_test).
 
-### <b>Evaluation<b>
+### <b>Evaluation</b>
 
 I evaluated the Decision Tree and Random Forest Models in the notebook:
 model_train_eval.ipynb. 
 
 Decision Tree: Accuracy - 82%
-Random Forest: Accuracy - <b>88%<b>
+Random Forest: Accuracy - <b>88%</b>
 
-### <b>Replication<b>
+### <b>Replication</b>
 
 To replicate my experiment, do the following: <br>
 
