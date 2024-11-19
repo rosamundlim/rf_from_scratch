@@ -8,7 +8,7 @@ The goal is to use this RF Model to predict whether an individual's annual incom
 ### <b>2. Directory Structure:</b>
 
 ```
-RF_FROM_SCRATCH
+rf_from_scratch
 │   .gitignore
 │   model_train_eval.ipynb
 │   README.md
